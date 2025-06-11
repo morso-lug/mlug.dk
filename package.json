@@ -1,0 +1,11 @@
+{
+  "name": "mlug.dk",
+  "private": true,
+  "scripts": {
+    "build": "eleventy --output=public",
+    "start": "eleventy --output=public --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.1"
+  }
+}
