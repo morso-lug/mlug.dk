@@ -1,0 +1,33 @@
+version: 3
+vars:
+  OUTPUT: public
+tasks:
+  build-css:
+    internal: true
+    cmds:
+      - npx tailwindcss --input=style.css --output={{.OUTPUT}}/style.css
+  build-html:
+    internal: true
+    env:
+      ELEVENTY_ENV: production
+    cmds:
+      - npx eleventy --output={{.OUTPUT}}
+  build:
+    deps:
+      - build-css
+      - build-html
+
+  serve-css:
+    internal: true
+    cmds:
+      - npx tailwindcss --input=style.css --output={{.OUTPUT}}/style.css --watch
+  serve-html:
+    internal: true
+    env:
+      ELEVENTY_ENV: development
+    cmds:
+      - npx eleventy --output={{.OUTPUT}} --serve
+  serve:
+    deps:
+      - serve-css
+      - serve-html
