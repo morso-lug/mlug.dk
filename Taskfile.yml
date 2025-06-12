@@ -6,21 +6,18 @@ tasks:
     internal: true
     cmds:
       - npx tailwindcss --input=style.css --output={{.OUTPUT}}/style.css {{if .WATCH}}--watch{{end}}
-
   html:
     internal: true
     env:
       ELEVENTY_ENV: "{{.ENV}}"
     cmds:
       - npx eleventy --output={{.OUTPUT}} {{if .SERVE}}--serve{{end}}
-
   build:
     deps:
       - task: css
       - task: html
         vars:
           ENV: production
-
   serve:
     deps:
       - task: css
