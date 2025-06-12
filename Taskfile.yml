@@ -1,6 +1,6 @@
 version: 3
 vars:
-  OUTPUT: public
+  OUTPUT: _site
 tasks:
   css:
     internal: true
