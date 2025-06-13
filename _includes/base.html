@@ -6,7 +6,43 @@
     <link rel="stylesheet" href="{{ '/style.css' | url }}" />
     <title>{{ title }}</title>
   </head>
-  <body class="h-screen antialiased">
-    {{ content }}
+  <body class="flex flex-col h-screen antialiased bg-white">
+    <header class="py-6">
+      <div class="flex mx-auto px-8 container">
+        <a href="{{ '/' | url }}" class="flex-1 font-light text-2xl">
+          Morsø Linux User Group
+        </a>
+
+        <nav class="text-xl -mr-4">
+          <ul class="flex">
+            <li>
+              <a
+                href="{{ '/nyheder' | url }}"
+                class="px-4 hover:underline font-medium text-blue-500"
+              >
+                Nyheder
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="{{ '/medlemmer' | url }}"
+                class="px-4 hover:underline font-medium text-blue-500"
+              >
+                Medlemmer
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">{{ content }}</main>
+
+    <footer class="mx-auto px-8 container">
+      <div class="py-8 border-t border-gray-200">
+        <p class="font-medium">© Morsø Linux User Group</p>
+      </div>
+    </footer>
   </body>
 </html>
