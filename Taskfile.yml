@@ -12,6 +12,9 @@ tasks:
       ELEVENTY_ENV: "{{.ENV}}"
     cmds:
       - npx eleventy --output={{.OUTPUT}} {{if .SERVE}}--serve{{end}}
+  fmt:
+    cmds:
+      - npx prettier . --write
   build:
     deps:
       - task: css
