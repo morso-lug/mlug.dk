@@ -2,3 +2,27 @@
 title: Kalender
 layout: base
 ---
+
+<div class="mx-auto px-8 container">
+  <h1 class="mt-12 mb-8 text-4xl font-bold">Kalender</h1>
+
+  {%- for event in collections.kalender -%}
+  <div>
+    <h2 class="text-xl">{{ event.data.title }}</h2>
+    <p>
+      <time class="{{ event.data.date | date: '%Y-%m-%d' }}">
+        {{ event.data.date | date: '%d-%m-%Y' }}
+      </time>
+    </p>
+    <p>
+      <a
+        href="https://www.openstreetmap.org/search?query={{ event.data.place | escape }}"
+        class="link"
+      >
+        {{ event.data.place }}
+      </a>
+    </p>
+    <div class="mt-4 prose">{{ event.content }}</div>
+  </div>
+  {%- endfor -%}
+</div>
