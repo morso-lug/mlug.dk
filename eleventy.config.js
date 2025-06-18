@@ -1,3 +1,3 @@
 export default function (config) {
-  config.addPassthroughCopy({ public: "." });
+  config.addPassthroughCopy("favicon.png");
 }
