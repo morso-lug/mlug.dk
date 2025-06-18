@@ -10,8 +10,8 @@ layout: base
   <div>
     <h2 class="text-xl">{{ event.data.title }}</h2>
     <p>
-      <time class="{{ event.data.date | date: '%Y-%m-%d' }}">
-        {{ event.data.date | date: '%d-%m-%Y' }}
+      <time class="{{ event.data.date | date: '%Y-%m-%dT%H:%M' }}">
+        {{ event.data.date | date: '%d-%m-%Y %H:%M' }}
       </time>
     </p>
     <p>
