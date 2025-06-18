@@ -13,11 +13,14 @@
   <body class="flex flex-col h-screen antialiased bg-white">
     <header class="py-6">
       <div class="flex mx-auto px-8 container">
-        <a href="{{ '/' | url }}" class="flex-1 font-light text-2xl">
-          Morsø Linux User Group
+        <a href="{{ '/' | url }}" class="flex flex-1">
+          <span class="h-16">{% include 'logo' %}</span>
+          <span class="ml-4 font-light text-2xl self-center"
+            >Morsø Linux User Group</span
+          >
         </a>
 
-        <nav class="text-xl -mr-4">
+        <nav class="text-xl -mr-4 self-center">
           <ul class="flex">
             <li>
               <a href="{{ '/nyheder' | url }}" class="px-4 font-medium link">
