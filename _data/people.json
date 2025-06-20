@@ -1,9 +1,18 @@
 [
   {
     "name": "Øjvind Fritjof Arnfred",
+<<<<<<< HEAD
     "email": "fritjof@mlug.dk",
     "image": "https://avatars.githubusercontent.com/u/43141596?s=400&u=b7bf365c8d8d8881e735c693644919b494bc8e50&v=4"
+=======
+    "email": "fritjof@mencagli-arnfred.dk",
+    "image": "https://github.com/Lindisfritjof.png"
+>>>>>>> 2761476 (* _data/people.json: tilføjet profilbillede og emails på Cem og selv)
   },
+    {"name": "Cem Bas",
+     "email": "cem@cakelabs.net",
+     "image": "https://s1.qwant.com/thumbr/474x557/a/8/ee7670cb50b53a5cbf333d534c25a27947f19d7307643b379856f2a91be8c8/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.Ja4ur8P1o2skruDeJ-hwrwHaIt%26pid%3DApi&q=0&b=1&p=0&a=0"
+    },
   {
     "name": "Kasper Isager Dalsgarð",
     "email": "kasperisager@hey.com",
