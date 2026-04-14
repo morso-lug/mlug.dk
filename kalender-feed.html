@@ -1,0 +1,22 @@
+---
+permalink: /kalender.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MLUG Kalender</title>
+  <link href="https://mlug.dk/kalender.xml" rel="self"/>
+  <link href="https://mlug.dk/kalender"/>
+  <id>https://mlug.dk/kalender</id>
+  {%- assign latest = collections.kalender | last -%}
+  <updated>{{ latest.data.date | date: '%Y-%m-%dT%H:%M:%S' }}Z</updated>
+  {%- for event in collections.kalender reversed -%}
+  <entry>
+    <title>{{ event.data.title | escape }}</title>
+    <link href="https://mlug.dk/kalender"/>
+    <id>https://mlug.dk/kalender/{{ event.data.date | date: '%Y-%m-%d' }}</id>
+    <updated>{{ event.data.date | date: '%Y-%m-%dT%H:%M:%S' }}Z</updated>
+    <summary>{{ event.data.date | date: '%d-%m-%Y %H:%M' }} — {{ event.data.place | escape }}</summary>
+    <content type="html">{{ event.content | escape }}</content>
+  </entry>
+  {%- endfor -%}
+</feed>
