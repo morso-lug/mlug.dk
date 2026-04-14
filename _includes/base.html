@@ -49,8 +49,18 @@
     <main class="flex-1">{{ content }}</main>
 
     <footer class="mx-auto mt-10 px-4 md:px-8 container">
-      <div class="py-8 border-t border-gray-200">
+      <div
+        class="flex justify-between items-center py-8 border-t border-gray-200"
+      >
         <p class="font-medium">© Morsø Linux User Group</p>
+        <a
+          href="https://matrix.to/#/%23mlug:deepfunk.dk"
+          class="inline-flex items-center link"
+          >Find os på
+          <span class="h-[1.4em] ml-2 [&>svg]:h-full [&>svg]:w-auto"
+            >{% include 'matrix.svg' %}</span
+          ></a
+        >
       </div>
     </footer>
   </body>
