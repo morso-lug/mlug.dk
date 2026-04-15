@@ -13,7 +13,7 @@ permalink: /kalender.xml
   <entry>
     <title>{{ event.data.title | escape }}</title>
     <link href="https://mlug.dk/kalender" />
-    <author>Morsø Linux User Group</author>
+    <author name="Morsø Linux User Group" />
     <id>https://mlug.dk/kalender/{{ event.data.date | date: '%Y-%m-%d' }}</id>
     <updated>{{ event.data.date | date: '%Y-%m-%dT%H:%M:%S' }}Z</updated>
     <summary>
